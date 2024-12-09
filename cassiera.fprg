@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="cassiera"/>
+        <attribute name="authors" value="ITS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-19 01:38:16 "/>
+        <attribute name="created" value="SVRTO0lUUy1QMTY7MjAyNC0xMS0xOTsiMTI6NTA6MjMgIjsxODk2"/>
+        <attribute name="edited" value="SVRTO0lUUy1QMTY7MjAyNC0xMS0xOTsiMDE6Mzg6MTYgIjsxOzIwMTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="costoprod" type="Integer" array="False" size=""/>
+            <declare name="totalepagamento" type="Integer" array="False" size=""/>
+            <assign variable="totalepagamento" expression="0"/>
+            <declare name="x" type="Boolean" array="False" size=""/>
+            <assign variable="x" expression="true"/>
+            <declare name="soldi" type="Integer" array="False" size=""/>
+            <declare name="resto" type="Integer" array="False" size=""/>
+            <output expression="&quot;Buongiorno&quot;" newline="True"/>
+            <while expression="x = true">
+                <output expression="&quot;Alro?&quot;" newline="True"/>
+                <input variable="x"/>
+                <if expression="x = true">
+                    <then>
+                        <output expression="&quot;quanto costa?&quot;" newline="True"/>
+                        <input variable="costoprod"/>
+                        <assign variable="totalepagamento" expression="totalepagamento + costoprod"/>
+                    </then>
+                    <else>
+                        <assign variable="x" expression="false"/>
+                    </else>
+                </if>
+                <output expression="&quot;il totale &#232;&quot; &amp;totalepagamento" newline="True"/>
+            </while>
+            <output expression="&quot;Quanto mi da?&quot;" newline="True"/>
+            <while expression="x = false">
+                <input variable="soldi"/>
+                <if expression="soldi &gt;= totalepagamento">
+                    <then>
+                        <assign variable="resto" expression="soldi - totalepagamento"/>
+                        <output expression="&quot;il resto &#232;:&quot; &amp;resto" newline="True"/>
+                        <assign variable="x" expression="true"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;i soldi non bastano&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Grazie e arrivederci&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
