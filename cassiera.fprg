@@ -13,7 +13,7 @@
         <body>
             <declare name="costoprod" type="Integer" array="False" size=""/>
             <declare name="totalepagamento" type="Integer" array="False" size=""/>
-            <assign variable="totalepagamento" expression="0"/>
+            <assign variable="totalepagamento" expression="2"/>
             <declare name="x" type="Boolean" array="False" size=""/>
             <assign variable="x" expression="true"/>
             <declare name="soldi" type="Integer" array="False" size=""/>
